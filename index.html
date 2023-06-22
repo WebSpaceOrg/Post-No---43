@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>webspace4u</title>
+    <link rel="stylesheet" href="index.cs" />
+    <style>
+      /* Import font */
+      @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+      /* General styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #090909;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .card {
+        width: 300px;
+        height: 450px;
+        background: linear-gradient(135deg, #2980b9, #6ab7ff);
+        border-radius: 10px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        position: relative;
+        transform-style: preserve-3d;
+        transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+        transition: transform 0.5s;
+        border: 3px solid #543808;
+      }
+
+        .card:hover 
+        {
+        transform:
+        perspective
+        (1000px)
+        rotateX(10deg)
+        rotateY(10deg);
+        }
+
+      .card-image {
+        width: 100%;
+        height: 60%;
+        background: url('image4.png') center/cover no-repeat;
+        transition: transform 0.3s;
+      }
+
+      .card:hover .card-image {
+        transform: scale(1.2);
+      }
+
+      .card-content {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        transform: translateZ(50px);
+        background-color: #826c34;
+        background-image: radial-gradient(#826c34, #332000);
+      }
+
+      .card-title {
+        font-size: 25px;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #fff;
+      }
+
+      .card-description {
+        font-size: 16px;
+        color: #fff;
+        margin-bottom: 20px;
+      }
+
+      .card-button {
+        padding: 10px 20px;
+        background-color: #7f5b41;
+        color: #fff;
+        font-weight: 600;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        border: 2px solid  #543808;
+        background-image: radial-gradient(circle, #7f5b41 20%, #916e32 90%);
+      }
+
+      .card-button:hover {
+        background-color: #7a5413;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="card-image"></div>
+      <div class="card-content">
+        <h2 class="card-title">iPhone 14 Plus</h2>
+        <p class="card-description">From ₹12483.00/mo and No Cost EMI</p>
+        <button class="card-button">Buy Now</button>
+      </div>
+    </div>
+  </body>
+</html>
